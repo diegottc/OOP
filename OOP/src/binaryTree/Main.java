@@ -16,7 +16,6 @@ public class Main {
         System.out.println();
         System.out.println("Impresion con nivel: ");
         tree.imprimirConNivel();
-        tree.mayorValorl();
 	}
 
 }
