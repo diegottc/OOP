@@ -27,9 +27,9 @@ public class Main {
 		System.out.println(p1 + "<-- p1 Punto mutable después de mover r2 creado con coordenadas enteras: no cambió, se mantuvo en (8,9)");
 		System.out.println();
 		
-		r1.show();
-		r2.show();
-		r3.show();
+		r1.show();System.out.println();
+		r2.show();System.out.println();
+		r3.show();System.out.println();
 		
 		
 		ImPoint imP1 = new ImPoint(1, 2);
