@@ -27,4 +27,21 @@ public class Rectangle {
 	public String toString(){
 		return "["+this.origin.toString()+"/"+this.width+"*"+this.height+"]";
 	}
+	
+	public void show(){
+		System.out.print("*1");
+		for (int i = 0; i < this.width; i++) {
+			System.out.print(" ");
+		}
+		System.out.print("*2");
+		for (int i = 0; i < this.height; i++) {
+			System.out.println();
+		}
+		System.out.print("*3");
+		for (int i = 0; i < this.width; i++) {
+			System.out.print(" ");
+		}
+		System.out.print("*4");
+		System.out.println();
+	}
 }

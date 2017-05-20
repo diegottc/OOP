@@ -23,4 +23,8 @@ public class Point {
 	public String toString(){
 		return "("+this.x+","+this.y+")";
 	}
+	
+	public String show(){
+		return "*";
+	}
 }
