@@ -3,7 +3,7 @@ package arbolBinario;
 public class Arbol {
 	Nodo raiz=null;
     
-	public boolean tieneraiz(){
+	public boolean tieneRaiz(){
         if(this.raiz==null)
         	return false;
         else
@@ -11,7 +11,7 @@ public class Arbol {
     }
  
     public Arbol alta(int dat){
-        if(!tieneraiz()){
+        if(!tieneRaiz()){
             Nodo nuevo = new Nodo(dat);
             raiz = nuevo;
         }else{
@@ -61,20 +61,20 @@ public class Arbol {
     	return actual.getDato();
     }
  
-    int suma,sumader,sumaizq,aux=0;
+   /* int suma,sumader,sumaizq,aux=0;
  
-    public void ayudantesuma(Nodo dat){
+    private int ayudanteSuma(Nodo dat){
         if(dat==null)
-                return;
+        	return 0;
         suma = aux + dat.getDato();
         aux = suma;
-        ayudantesuma(dat.getDer());
-        ayudantesuma(dat.getIzq());
+        ayudanteSuma(dat.getDer());
+        ayudanteSuma(dat.getIzq());
     }
     
     public int sumaizquierda(){
         Nodo dat = raiz;
-        ayudantesuma(dat.getIzq());
+        ayudanteSuma(dat.getIzq());
         sumaizq = suma;
         return sumaizq;
  
@@ -83,7 +83,7 @@ public class Arbol {
     public int sumaderecha(){
         aux = 0;
         Nodo dat = raiz;
-        ayudantesuma(dat.getDer());
+        ayudanteSuma(dat.getDer());
         sumader = suma;
         return sumader;
     }
@@ -93,13 +93,13 @@ public class Arbol {
         s1=(double)(sumaizq);s2=(double)(sumader);s3=(double)(raiz.dato);
         media=(s1+s2+s3)/10;
         return media;
-    }
+    }*/
     
     
     private void imprimirConNivel(Nodo node, int nivel)  {
         if (node != null) {    
             imprimirConNivel(node.getIzq(), nivel+1);
-            System.out.print(node.getDato() + " ("+nivel+") - ");
+            System.out.print(node.getDato() + "("+nivel+") - ");
             imprimirConNivel(node.getDer(), nivel+1);
         }
     }

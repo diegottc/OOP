@@ -14,11 +14,12 @@ public class Main {
 			x.alta(a[i]);
 		System.out.println("Los datos son: ");
 		x.imprimir();
+		System.out.println();
 		x.imprimirConNivel();
 		System.out.println("\nEl numero mayor es: "+x.mayor());
-		System.out.println("La suma de los numeros de la Izquierda es: "+x.sumaizquierda());
+		/*System.out.println("La suma de los numeros de la Izquierda es: "+x.sumaizquierda());
 		System.out.println("La suma de los numeros de la Derecha es: "+x.sumaderecha());
-		System.out.println("La media es: "+x.media());
+		System.out.println("La media es: "+x.media());*/
 	}
 
 }

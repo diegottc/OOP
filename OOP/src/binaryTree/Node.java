@@ -2,23 +2,19 @@ package binaryTree;
 
 public class Node {
 	int value;
-	BinaryTree nodoIzq;
-	BinaryTree nodoDer;
+	Node nodoIzq;
+	Node nodoDer;
 	
 	public Node(int value){
 		this.value = value;
+		this.nodoIzq = null;
+		this.nodoDer = null;
 	}
 	
-	public Node(int value, BinaryTree izq, BinaryTree der){
+	public Node(int value, Node izq, Node der){
 		this.value = value;
 		this.nodoIzq = izq;
 		this.nodoDer = der;
-	}
-	
-	public Node(){
-		this.value = 0;
-		this.nodoIzq = null;
-		this.nodoDer = null;
 	}
 	
 	public int getValue() {
@@ -29,19 +25,19 @@ public class Node {
 		this.value = value;
 	}
 	
-	public BinaryTree getNodeIzq(){
+	public Node getNodeIzq(){
 		return nodoIzq;
 	}
 	
-	public BinaryTree getNodeDer(){
+	public Node getNodeDer(){
 		return nodoDer;
 	}
 	
-	public void setNodeIzq(BinaryTree node){
+	public void setNodeIzq(Node node){
 		this.nodoIzq = node;
 	}
 	
-	public void setNodeDer(BinaryTree node){
+	public void setNodeDer(Node node){
 		this.nodoDer = node;
 	}
 	

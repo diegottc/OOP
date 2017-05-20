@@ -4,7 +4,7 @@ public class BinaryTree {
 	Node root;
 
 	public BinaryTree() {
-		this.root = new Node();
+		this.root = null;
 	}
 	
 	public void put(int value) {
@@ -13,10 +13,7 @@ public class BinaryTree {
 	
 	public Node modify(int value, Node node) {
 		if (node==null){
-			Node nuevo = new Node();
-			nuevo.setValue(value);
-            nuevo.setNodeDer(new BinaryTree());
-            nuevo.setNodeIzq(new BinaryTree());
+			Node nuevo = new Node(value);
 			return nuevo;
 		}
 		if (value == node.getValue())
@@ -27,6 +24,20 @@ public class BinaryTree {
 			node.setNodeDer(modify(value, node.getNodeDer()));
 		return node;
 	}
+	
+	public int suma() {
+	      Node nodo= this.root;
+	      int suma = 0;
+	      while (nodo!=null) {
+	        if (llave==nodo.llave)
+	          return nodo.val;
+	        if (llave<nodo.llave)
+	          nodo= nodo.izq;
+	        else
+	          nodo= nodo.der;
+	      }
+	      return null;
+	    }
 	
 	public void imprimir(){
 		imprimir(root);
@@ -51,31 +62,6 @@ public class BinaryTree {
     public void imprimirConNivel () {
         imprimirConNivel (root,1);
         System.out.println();
-    }
-    
-    public void preOrder(){
-        if (!(root == null)) {
-            System.out.print( root.getValue() + ", "  );
-            root.hi.preOrder();
-            root.hd.preOrder();
-        }
-    }
- 
-    public void inOrder(){
-        if (!(root == null)) {
-            raiz.hi.inOrder();
-            System.out.print( raiz.dato + ", "  );
-            raiz.hd.inOrder();
-        }
-    }
- 
-    public void posOrder(){
-        if (!(root == null)) {
-            raiz.hd.posOrder();
-            raiz.hi.posOrder();
-            System.out.print( raiz.dato + ", "  );
- 
-        }
     }
 	
 }
