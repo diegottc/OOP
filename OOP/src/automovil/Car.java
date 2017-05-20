@@ -23,4 +23,16 @@ public class Car {
 		state.brake(this);
 	}
 	
+	public State getState(){
+		return state;
+	}
+	
+	public void setState(State state) {
+		this.state = state;
+	}
+	
+	public void currentState(){
+		state.showNombre();
+	}
+	
 }
