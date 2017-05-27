@@ -1,4 +1,4 @@
-package automovil;
+package automovilInterfaces;
 
 public class Car {
 	State state;
